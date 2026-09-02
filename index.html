@@ -1,0 +1,2177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Language Academy | Learn a Language. Open a World.</title>
+    <meta name="description" content="Master a new language with confidence. Practical, speaking-focused language courses for English, German, French, Spanish, Arabic, Chinese, Japanese, and IELTS preparation.">
+    <meta name="keywords" content="Language Academy, Learn English, German Course, French Classes, Spanish Speaking, Arabic Institute, IELTS Preparation, Language Learning">
+    <meta name="author" content="Global Language Academy">
+
+    <meta property="og:title" content="Global Language Academy | Learn a Language. Open a World.">
+    <meta property="og:description" content="Practical language courses designed to help you speak, understand and communicate with confidence.">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS RESET & VARIABLES */
+        :root {
+            --primary: #0F2C59;
+            --primary-light: #1A3E74;
+            --accent: #00A884;
+            --accent-hover: #008f70;
+            --accent-soft: #E6F7F3;
+            --bg-light: #F8FAFC;
+            --text-main: #1E293B;
+            --text-muted: #64748B;
+            --white: #FFFFFF;
+            --border-color: #E2E8F0;
+            --shadow-sm: 0 2px 4px rgba(15, 44, 89, 0.05);
+            --shadow-md: 0 4px 12px rgba(15, 44, 89, 0.08);
+            --shadow-lg: 0 12px 24px rgba(15, 44, 89, 0.12);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+            color: var(--primary);
+            line-height: 1.25;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        button, input, select, textarea {
+            font-family: inherit;
+            font-size: inherit;
+            outline: none;
+            border: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-padding {
+            padding: 5rem 0;
+        }
+
+        .text-center { text-align: center; }
+        .flex { display: flex; }
+        .grid { display: grid; }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.85rem 1.75rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: var(--transition);
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: var(--white);
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        /* BADGES & HEADINGS */
+        .section-tag {
+            display: inline-block;
+            padding: 0.35rem 1rem;
+            background-color: var(--accent-soft);
+            color: var(--accent);
+            font-weight: 700;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: var(--text-muted);
+            font-size: 1.125rem;
+            max-width: 650px;
+            margin: 0 auto 3rem auto;
+        }
+
+        /* HEADER & NAVBAR */
+        .navbar {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 1.35rem;
+            color: var(--primary);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: 800;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent);
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 4rem 0 6rem 0;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.25rem;
+            margin-bottom: 1.25rem;
+            color: var(--primary);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-highlights {
+            display: flex;
+            gap: 1.5rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        .highlight-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: var(--primary);
+        }
+
+        .highlight-dot {
+            width: 10px;
+            height: 10px;
+            background-color: var(--accent);
+            border-radius: 50%;
+        }
+
+        .hero-image {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+        }
+
+        /* SEARCH SECTION */
+        .search-section {
+            margin-top: -3rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-box-wrapper {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .search-input-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .search-input-group input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+        }
+
+        .search-input-group input:focus {
+            border-color: var(--primary);
+        }
+
+        .filter-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .pill-btn {
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .pill-btn:hover, .pill-btn.active {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* ABOUT SECTION */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .about-list {
+            margin: 1.5rem 0 2rem 0;
+            display: grid;
+            gap: 1rem;
+        }
+
+        .about-list-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 600;
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            background-color: var(--accent-soft);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 0.85rem;
+        }
+
+        /* LANGUAGES GRID */
+        .languages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .lang-card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .lang-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--accent);
+        }
+
+        .lang-flag {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .lang-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .lang-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .lang-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background-color: var(--bg-light);
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-radius: var(--radius-sm);
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* COURSES SECTION */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .course-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .course-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .course-tags {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.75rem;
+        }
+
+        .course-level {
+            background-color: var(--accent-soft);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        .course-mode {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        .course-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .course-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .course-meta {
+            border-top: 1px solid var(--border-color);
+            padding-top: 1rem;
+            margin-top: auto;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .course-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .course-actions .btn {
+            flex: 1;
+            padding: 0.6rem;
+            font-size: 0.85rem;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(15, 44, 89, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+            backdrop-filter: blur(4px);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            max-width: 650px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 2.5rem;
+            position: relative;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1.25rem;
+            right: 1.25rem;
+            font-size: 1.5rem;
+            background: none;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        .modal-title {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-body h4 {
+            margin: 1.25rem 0 0.5rem 0;
+            color: var(--primary);
+        }
+
+        /* LEARNING LEVELS */
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .level-card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            padding: 2.5rem;
+            border-top: 5px solid var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .level-card:nth-child(2) { border-color: var(--accent); }
+        .level-card:nth-child(3) { border-color: #D97706; }
+
+        .level-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* FEATURES & METHOD */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .method-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            position: relative;
+        }
+
+        .step-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .step-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        /* TEACHERS & JOURNEY */
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 2rem;
+        }
+
+        .teacher-card {
+            background-color: var(--white);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            padding: 2rem 1.5rem;
+        }
+
+        .teacher-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--accent-soft);
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            margin: 0 auto 1.25rem auto;
+            font-weight: 700;
+        }
+
+        .journey-flow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .journey-step {
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .journey-arrow {
+            color: var(--accent);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-soft);
+            color: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        /* IELTS SECTION */
+        .ielts-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 3.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .ielts-banner h2 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .ielts-list {
+            margin-bottom: 2rem;
+        }
+
+        .ielts-list li {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* MODES & ENROLLMENT */
+        .modes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .mode-card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+        }
+
+        .enroll-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .enroll-step-card {
+            background-color: var(--white);
+            padding: 1.5rem;
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--accent);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* TESTIMONIALS & FAQ */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        .sample-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .faq-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--white);
+            border-radius: var(--radius-sm);
+            margin-bottom: 1rem;
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            background: none;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 1.5rem 1.25rem 1.5rem;
+            max-height: 300px;
+        }
+
+        /* FORM */
+        .form-container {
+            max-width: 750px;
+            margin: 0 auto;
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border-color);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 0.85rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            background-color: var(--bg-light);
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--primary);
+            background-color: var(--white);
+        }
+
+        .form-alert {
+            display: none;
+            padding: 1rem;
+            border-radius: var(--radius-sm);
+            background-color: #DEF7EC;
+            color: #03543F;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        /* GALLERY & LIGHTBOX */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            height: 220px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 3000;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .lightbox.active { display: flex; }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 85vh;
+            border-radius: var(--radius-sm);
+        }
+
+        /* FINAL CTA & FOOTER */
+        .cta-box {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 4rem 2rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            color: var(--white);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-box p {
+            color: rgba(255,255,255,0.8);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 4rem 0 2rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.25rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* BACK TO TOP */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 45px;
+            height: 45px;
+            background-color: var(--accent);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 999;
+            box-shadow: var(--shadow-md);
+            font-weight: bold;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 992px) {
+            .hero-grid, .about-grid, .ielts-banner, .modes-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-content h1 { font-size: 2.5rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .hamburger { display: block; }
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 2rem;
+                align-items: flex-start;
+                transition: var(--transition);
+                box-shadow: var(--shadow-lg);
+            }
+            .nav-menu.active { left: 0; }
+            .hero-buttons { flex-direction: column; }
+            .hero-highlights { flex-direction: column; gap: 0.75rem; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.full { grid-column: span 1; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .journey-flow { flex-direction: column; gap: 1.5rem; }
+            .journey-arrow { transform: rotate(90deg); }
+        }
+
+        @media (max-width: 480px) {
+            .section-title { font-size: 1.75rem; }
+            .hero-content h1 { font-size: 2rem; }
+            .search-box-wrapper { padding: 1.5rem; }
+            .modal-content { padding: 1.5rem; }
+            .cta-box { padding: 2.5rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">G</div>
+                <span>Global Language Academy</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#languages" class="nav-link">Languages</a>
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#method" class="nav-link">Method</a>
+                <a href="#teachers" class="nav-link">Teachers</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#enroll" class="btn btn-accent" style="padding: 0.5rem 1.25rem;">Enroll Now</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <span class="section-tag">Global Language Academy</span>
+                <h1>Master a New Language With Confidence</h1>
+                <p>Practical language courses designed to help you speak, understand and communicate with confidence in real-world situations.</p>
+                <div class="hero-buttons">
+                    <a href="#courses" class="btn btn-primary">Explore Courses</a>
+                    <a href="#enroll" class="btn btn-accent">Enroll Now</a>
+                </div>
+                <div class="hero-highlights">
+                    <div class="highlight-item"><span class="highlight-dot"></span> Beginner Friendly</div>
+                    <div class="highlight-item"><span class="highlight-dot"></span> Flexible Learning</div>
+                    <div class="highlight-item"><span class="highlight-dot"></span> Practical Communication</div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80" alt="Students learning language in classroom">
+            </div>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-box-wrapper">
+                <h3 class="text-center" style="margin-bottom: 1.5rem;">Which Language Would You Like to Learn?</h3>
+                <div class="search-input-group">
+                    <input type="text" id="course-search-input" placeholder="Search a language or course (e.g. German, IELTS, Spoken English)...">
+                </div>
+                <div class="filter-pills" id="filter-pills">
+                    <button class="pill-btn active" data-filter="all">All</button>
+                    <button class="pill-btn" data-filter="English">English</button>
+                    <button class="pill-btn" data-filter="German">German</button>
+                    <button class="pill-btn" data-filter="French">French</button>
+                    <button class="pill-btn" data-filter="Spanish">Spanish</button>
+                    <button class="pill-btn" data-filter="Arabic">Arabic</button>
+                    <button class="pill-btn" data-filter="Chinese">Chinese</button>
+                    <button class="pill-btn" data-filter="Japanese">Japanese</button>
+                    <button class="pill-btn" data-filter="IELTS">IELTS Preparation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container about-grid">
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1000&q=80" alt="Teacher interacting with language students">
+            </div>
+            <div>
+                <span class="section-tag">About Our Academy</span>
+                <h2 class="section-title">Learn Languages. Build Confidence.</h2>
+                <p>At Global Language Academy, our purpose is simple: to make language acquisition practical, natural, and accessible. We focus on real conversation skills so you can communicate effectively in global personal and professional environments.</p>
+                <div class="about-list">
+                    <div class="about-list-item"><span class="check-icon">✓</span> Practical language education built for real-life use</div>
+                    <div class="about-list-item"><span class="check-icon">✓</span> Speaking-focused learning methodologies</div>
+                    <div class="about-list-item"><span class="check-icon">✓</span> Structured lessons tailored from beginner to advanced levels</div>
+                    <div class="about-list-item"><span class="check-icon">✓</span> Supportive, engaging, and interactive learning environment</div>
+                </div>
+                <a href="https://wa.me/923472842874?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20language%20courses." target="_blank" class="btn btn-accent">Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Languages Offered</span>
+                <h2 class="section-title">Explore World Languages</h2>
+                <p class="section-subtitle">Select from our premier lineup of global language programs.</p>
+            </div>
+            <div class="languages-grid">
+                <div class="lang-card">
+                    <div class="lang-flag">🇬🇧</div>
+                    <h3>English</h3>
+                    <p>Master global communication for business, study, and daily conversation.</p>
+                    <span class="lang-badge">Beginner to Advanced</span>
+                    <div><a href="#courses" class="btn btn-outline" style="width: 100%;">View Courses</a></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-flag">🇩🇪</div>
+                    <h3>German</h3>
+                    <p>Learn German for work, university admission, or relocation in Europe.</p>
+                    <span class="lang-badge">A1 to B2 Levels</span>
+                    <div><a href="#courses" class="btn btn-outline" style="width: 100%;">View Courses</a></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-flag">🇫🇷</div>
+                    <h3>French</h3>
+                    <p>Develop clear pronunciation and conversation skills in French.</p>
+                    <span class="lang-badge">Beginner to Intermediate</span>
+                    <div><a href="#courses" class="btn btn-outline" style="width: 100%;">View Courses</a></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-flag">🇪🇸</div>
+                    <h3>Spanish</h3>
+                    <p>Understand and speak one of the world's most widely spoken languages.</p>
+                    <span class="lang-badge">Beginner Friendly</span>
+                    <div><a href="#courses" class="btn btn-outline" style="width: 100%;">View Courses</a></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-flag">🇸🇦</div>
+                    <h3>Arabic</h3>
+                    <p>Focus on modern standard Arabic grammar, reading, and conversational fluency.</p>
+                    <span class="lang-badge">All Levels</span>
+                    <div><a href="#courses" class="btn btn-outline" style="width: 100%;">View Courses</a></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-flag">🇨🇳</div>
+                    <h3>Chinese</h3>
+                    <p>Learn Mandarin essentials, pinyin phonetics, and fundamental character reading.</p>
+                    <span class="lang-badge">Beginner Level</span>
+                    <div><a href="#courses" class="btn btn-outline" style="width: 100%;">View Courses</a></div>
+                </div>
+                <div class="lang-card">
+                    <div class="lang-flag">🇯🇵</div>
+                    <h3>Japanese</h3>
+                    <p>Build basic conversational ability and practical Japanese language skills.</p>
+                    <span class="lang-badge">Beginner Level</span>
+                    <div><a href="#courses" class="btn btn-outline" style="width: 100%;">View Courses</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="courses" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Course Catalog</span>
+                <h2 class="section-title">Featured Language Courses</h2>
+                <p class="section-subtitle">Structured, goal-oriented programs designed for effective learning.</p>
+            </div>
+
+            <div class="courses-grid" id="courses-grid-container">
+                </div>
+        </div>
+    </section>
+
+    <div class="modal" id="course-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close-btn">&times;</button>
+            <h3 class="modal-title" id="modal-title">Course Title</h3>
+            <div class="modal-body" id="modal-body-content">
+                </div>
+            <div style="margin-top: 1.5rem; display: flex; gap: 1rem;">
+                <a href="#enroll" class="btn btn-primary" onclick="closeModal()">Enroll Now</a>
+                <a href="https://wa.me/923472842874?text=Hello,%20I%20want%20to%20ask%20about%20a%20course." target="_blank" class="btn btn-accent">Ask on WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Proficiency Framework</span>
+                <h2 class="section-title">Structured Learning Levels</h2>
+                <p class="section-subtitle">Progress systematically through step-by-step competency stages.</p>
+            </div>
+            <div class="levels-grid">
+                <div class="level-card">
+                    <h3>Beginner</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">Start your language journey with foundational basics.</p>
+                    <ul style="display: grid; gap: 0.5rem; color: var(--text-main);">
+                        <li>• Basic everyday vocabulary</li>
+                        <li>• Common phrases & greetings</li>
+                        <li>• Simple daily conversations</li>
+                        <li>• Fundamentals of pronunciation</li>
+                    </ul>
+                </div>
+                <div class="level-card">
+                    <h3>Intermediate</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">Expand your practical speaking and expression.</p>
+                    <ul style="display: grid; gap: 0.5rem; color: var(--text-main);">
+                        <li>• Better speaking speed & flow</li>
+                        <li>• Grammar improvement & usage</li>
+                        <li>• Real-life complex communication</li>
+                        <li>• Expanded topic discussions</li>
+                    </ul>
+                </div>
+                <div class="level-card">
+                    <h3>Advanced</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1rem;">Achieve natural fluency and professional mastery.</p>
+                    <ul style="display: grid; gap: 0.5rem; color: var(--text-main);">
+                        <li>• Natural fluency & accent practice</li>
+                        <li>• Professional & academic communication</li>
+                        <li>• Advanced nuanced vocabulary</li>
+                        <li>• Spontaneous dialogue & debates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Academy Highlights</span>
+                <h2 class="section-title">Why Choose Global Language Academy</h2>
+                <p class="section-subtitle">We prioritize functional language acquisition through interactive engagement.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Practical Speaking Practice</h3>
+                    <p style="color: var(--text-muted);">Interactive speaking drills designed to build immediate confidence.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Structured Learning</h3>
+                    <p style="color: var(--text-muted);">Clear curriculum roadmaps tailored from basic level to advanced fluency.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Beginner-Friendly Classes</h3>
+                    <p style="color: var(--text-muted);">Welcoming atmosphere with patient instruction for true starters.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Experienced Instructors</h3>
+                    <p style="color: var(--text-muted);">Dedicated instructors focused on student progress and support.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Flexible Learning Options</h3>
+                    <p style="color: var(--text-muted);">Choose between interactive online sessions or structured on-site classes.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Supportive Environment</h3>
+                    <p style="color: var(--text-muted);">Encouraging environment where making mistakes is part of learning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="method" class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Our Methodology</span>
+                <h2 class="section-title">How You Will Learn</h2>
+                <p class="section-subtitle">A proven 4-step framework designed for language retention.</p>
+            </div>
+            <div class="method-steps">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <h3>Choose Your Language</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Select from our available language tracks based on your goals.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <h3>Select Your Level</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Start at the beginner, intermediate, or advanced module.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <h3>Learn & Practice</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Engage in structured lessons with interactive practice drills.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">04</div>
+                    <h3>Build Confidence</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Communicate naturally in real conversations and situations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="teachers" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Our Faculty</span>
+                <h2 class="section-title">Meet Our Instructors</h2>
+                <p class="section-subtitle">Dedicated trainers committed to your linguistic growth.</p>
+            </div>
+            <div class="teachers-grid">
+                <div class="teacher-card">
+                    <div class="teacher-avatar">EN</div>
+                    <h3>English Instructor</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Spoken English & Business Specialist</p>
+                    <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Instructor profile available on request</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">DE</div>
+                    <h3>German Instructor</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">German A1-B2 Specialist</p>
+                    <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Instructor profile available on request</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">FR</div>
+                    <h3>French Instructor</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">French Language Trainer</p>
+                    <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Instructor profile available on request</p>
+                </div>
+                <div class="teacher-card">
+                    <div class="teacher-avatar">AR</div>
+                    <h3>Arabic Instructor</h3>
+                    <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 0.5rem;">Standard Arabic Specialist</p>
+                    <p style="font-size: 0.8rem; color: var(--accent); font-weight: 600;">Instructor profile available on request</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Path To Mastery</span>
+                <h2 class="section-title">The Student Journey</h2>
+                <p class="section-subtitle">Your step-by-step journey toward functional language communication.</p>
+            </div>
+            <div class="journey-flow">
+                <div class="journey-step">1. Assess</div>
+                <div class="journey-arrow">→</div>
+                <div class="journey-step">2. Learn</div>
+                <div class="journey-arrow">→</div>
+                <div class="journey-step">3. Practice</div>
+                <div class="journey-arrow">→</div>
+                <div class="journey-step">4. Speak</div>
+                <div class="journey-arrow">→</div>
+                <div class="journey-step">5. Improve</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Core Competencies</span>
+                <h2 class="section-title">Skills You Will Develop</h2>
+                <p class="section-subtitle">Comprehensive training covering all main aspects of language learning.</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card"><div class="skill-icon">🗣️</div> <strong>Speaking</strong></div>
+                <div class="skill-card"><div class="skill-icon">🎧</div> <strong>Listening</strong></div>
+                <div class="skill-card"><div class="skill-icon">📖</div> <strong>Reading</strong></div>
+                <div class="skill-card"><div class="skill-icon">✍️</div> <strong>Writing</strong></div>
+                <div class="skill-card"><div class="skill-icon">📚</div> <strong>Vocabulary</strong></div>
+                <div class="skill-card"><div class="skill-icon">📝</div> <strong>Grammar</strong></div>
+                <div class="skill-card"><div class="skill-icon">🎙️</div> <strong>Pronunciation</strong></div>
+                <div class="skill-card"><div class="skill-icon">💬</div> <strong>Conversation</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="ielts-banner">
+                <div>
+                    <span class="section-tag" style="background: rgba(255,255,255,0.2); color: #fff;">Exam Prep</span>
+                    <h2>Prepare for IELTS With Confidence</h2>
+                    <p style="margin-bottom: 1.5rem; color: rgba(255,255,255,0.9);">Targeted practice and strategy modules to help you prepare for Academic and General IELTS exams.</p>
+                    <a href="https://wa.me/923472842874?text=Hello,%20I%20would%20like%20to%20ask%20about%20IELTS%20Classes." target="_blank" class="btn btn-accent">Ask About IELTS Classes</a>
+                </div>
+                <div>
+                    <ul class="ielts-list">
+                        <li><span style="color: var(--accent);">✓</span> Comprehensive Speaking Practice</li>
+                        <li><span style="color: var(--accent);">✓</span> Focused Listening Techniques</li>
+                        <li><span style="color: var(--accent);">✓</span> Time-Management Reading Strategies</li>
+                        <li><span style="color: var(--accent);">✓</span> Structured Essay & Task Writing Practice</li>
+                        <li><span style="color: var(--accent);">✓</span> Simulated Mock Test Evaluations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Flexible Formats</span>
+                <h2 class="section-title">Flexible Learning Options</h2>
+                <p class="section-subtitle">Choose the learning mode that matches your personal schedule.</p>
+            </div>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary);">ONLINE LEARNING</h3>
+                    <ul style="display: grid; gap: 0.75rem; color: var(--text-muted);">
+                        <li>• Learn conveniently from home</li>
+                        <li>• Flexible schedule access</li>
+                        <li>• Interactive digital classroom lessons</li>
+                        <li>• Live conversation practice with peers</li>
+                    </ul>
+                </div>
+                <div class="mode-card">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary);">ON-SITE LEARNING</h3>
+                    <ul style="display: grid; gap: 0.75rem; color: var(--text-muted);">
+                        <li>• Traditional interactive classroom setting</li>
+                        <li>• Direct instructor guidance</li>
+                        <li>• Face-to-face speaking drills</li>
+                        <li>• Collaborative group learning interaction</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Simple Process</span>
+                <h2 class="section-title">How To Enroll</h2>
+                <p class="section-subtitle">Get started in just four easy steps.</p>
+            </div>
+            <div class="enroll-steps">
+                <div class="enroll-step-card">
+                    <h4>1. Choose Course</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Select your preferred language & module.</p>
+                </div>
+                <div class="enroll-step-card">
+                    <h4>2. Contact Academy</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Reach out via WhatsApp or enrollment form.</p>
+                </div>
+                <div class="enroll-step-card">
+                    <h4>3. Discuss Schedule</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Confirm timing and learning mode.</p>
+                </div>
+                <div class="enroll-step-card">
+                    <h4>4. Start Learning</h4>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem;">Begin your sessions and build skills.</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="https://wa.me/923472842874?text=Hello,%20I%20want%20to%20enroll%20in%20a%20course." target="_blank" class="btn btn-accent">Chat on WhatsApp to Enroll</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Student Feedback</span>
+                <h2 class="section-title">Sample Student Experience</h2>
+                <p class="section-subtitle">Examples of how practical language instruction builds confidence.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <span class="sample-label">Sample Student Feedback</span>
+                    <p style="color: var(--text-muted); font-style: italic; margin-bottom: 1rem;">"The conversation drills made a huge difference. I felt far more comfortable speaking during my work meetings."</p>
+                    <strong>English Student</strong>
+                </div>
+                <div class="testimonial-card">
+                    <span class="sample-label">Sample Student Feedback</span>
+                    <p style="color: var(--text-muted); font-style: italic; margin-bottom: 1rem;">"The structured German A1 lessons provided a solid foundation. The instructor was clear and encouraging."</p>
+                    <strong>German Student</strong>
+                </div>
+                <div class="testimonial-card">
+                    <span class="sample-label">Sample Student Feedback</span>
+                    <p style="color: var(--text-muted); font-style: italic; margin-bottom: 1rem;">"Focused IELTS strategies helped me organize my speaking and writing preparation efficiently."</p>
+                    <strong>IELTS Student</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Academy Life</span>
+                <h2 class="section-title">Learning Environment</h2>
+                <p class="section-subtitle">Take a look inside our modern language learning environment.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Students practicing conversation" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Teacher explaining lesson" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80" alt="Language study books and notes" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80')">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Online learning session" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Enlarged view">
+    </div>
+
+    <section id="faq" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Questions & Answers</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Find quick answers to common questions about our academy.</p>
+            </div>
+            <div class="faq-wrapper">
+                <div class="faq-item">
+                    <button class="faq-question">Which languages do you teach? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>We offer courses in English, German, French, Spanish, Arabic, Chinese, Japanese, as well as specialized IELTS Preparation modules.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer beginner-level courses? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes, all our primary language tracks feature starter/beginner levels designed specifically for students with zero prior knowledge.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Are classes online or on-site? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>We offer both interactive live online classes and structured physical on-site classroom sessions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How can I choose my language level? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>You can contact our advisors for an initial assessment to determine whether Beginner, Intermediate, or Advanced is right for you.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Do you offer IELTS preparation? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes, we provide dedicated IELTS preparation modules covering Speaking, Listening, Reading, Writing, and practice mock tests.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How do I enroll? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>You can fill out the online enrollment form on this website or contact us directly on WhatsApp to get started.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How can I ask about course fees? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Please contact us directly via phone or WhatsApp at 03472842874 for the most up-to-date fee schedule and payment plans.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I contact the academy through WhatsApp? <span>+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes, WhatsApp is our primary instant response channel. Click any WhatsApp button on this page to chat with us immediately.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="enroll" class="section-padding" style="background-color: var(--white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Get Started Today</span>
+                <h2 class="section-title">Course Enrollment Request</h2>
+                <p class="section-subtitle">Submit your details and our team will get in touch with class schedule information.</p>
+            </div>
+            <div class="form-container">
+                <form id="enrollment-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="fullname">Full Name *</label>
+                            <input type="text" id="fullname" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="03472842874">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required placeholder="name@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="language">Select Language *</label>
+                            <select id="language" required>
+                                <option value="">Select Language</option>
+                                <option value="English">English</option>
+                                <option value="German">German</option>
+                                <option value="French">French</option>
+                                <option value="Spanish">Spanish</option>
+                                <option value="Arabic">Arabic</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="IELTS">IELTS Prep</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Select Course *</label>
+                            <select id="course" required>
+                                <option value="">Select Course</option>
+                                <option value="General English">General English</option>
+                                <option value="Spoken English">Spoken English</option>
+                                <option value="Business English">Business English</option>
+                                <option value="IELTS Prep">IELTS Preparation</option>
+                                <option value="German A1">German A1</option>
+                                <option value="German A2">German A2</option>
+                                <option value="French Beginner">French Beginner</option>
+                                <option value="Arabic Language">Arabic Language</option>
+                                <option value="Spanish Beginner">Spanish Beginner</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="level">Current Level *</label>
+                            <select id="level" required>
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label for="mode">Preferred Learning Mode *</label>
+                            <select id="mode" required>
+                                <option value="Online">Online Learning</option>
+                                <option value="On-site">On-site Learning</option>
+                            </select>
+                        </div>
+                        <div class="form-group full">
+                            <label for="message">Message / Questions</label>
+                            <textarea id="message" rows="4" placeholder="Any specific requirements or questions?"></textarea>
+                        </div>
+                    </div>
+                    <div style="margin-top: 1.5rem;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Enrollment Request</button>
+                    </div>
+                </form>
+                <div class="form-alert" id="form-alert">
+                    Thank you! Your enrollment request has been logged.
+                    <div style="margin-top: 1rem;">
+                        <a id="wa-continue-btn" href="https://wa.me/923472842874" target="_blank" class="btn btn-accent">Continue on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Contact Us</h2>
+                <p class="section-subtitle">Reach out for inquiries, schedules, or admissions assistance.</p>
+            </div>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <h3>Contact Information</h3>
+                    <p style="margin: 1rem 0;"><strong>Academy Name:</strong> Global Language Academy</p>
+                    <p style="margin-bottom: 1rem;"><strong>Phone Number:</strong> <a href="tel:03472842874" style="color: var(--primary); font-weight: bold;">03472842874</a></p>
+                    <p style="margin-bottom: 1.5rem;"><strong>Email:</strong> info@globallanguageacademy.com</p>
+                    <div>
+                        <a href="https://wa.me/923472842874?text=Hello,%20I%20have%20an%20inquiry%20about%20the%20academy." target="_blank" class="btn btn-accent">Chat on WhatsApp</a>
+                    </div>
+                </div>
+          
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="padding-bottom: 0;">
+        <div class="container">
+            <div class="cta-box">
+                <h2>Ready to Start Your Language Journey?</h2>
+                <p>Choose a language, build your skills and start communicating with confidence today.</p>
+                <div class="cta-buttons">
+                    <a href="#enroll" class="btn btn-accent">Enroll Now</a>
+                    <a href="https://wa.me/923472842874?text=Hello,%20I%20am%20ready%20to%20start%20my%20language%20journey." target="_blank" class="btn btn-outline" style="border-color: #fff; color: #fff;">WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 5rem;">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#home" class="logo" style="color: var(--white); margin-bottom: 1rem;">
+                        <div class="logo-icon">G</div>
+                        <span>Global Language Academy</span>
+                    </a>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem;">"Learn a Language. Open a World." Practical, speaking-focused language training for career, study, and growth.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#languages">Languages</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="#courses">English Courses</a></li>
+                        <li><a href="#courses">German Courses</a></li>
+                        <li><a href="#courses">French Classes</a></li>
+                        <li><a href="#courses">Arabic Language</a></li>
+                        <li><a href="#courses">IELTS Preparation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Info</h4>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 0.5rem;">Phone: <a href="tel:03472842874" style="color: #fff;">03472842874</a></p>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.25rem;">WhatsApp: 923472842874</p>
+                    <a href="https://wa.me/923472842874?text=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20language%20courses." target="_blank" class="btn btn-accent" style="padding: 0.5rem 1rem; font-size: 0.85rem;">WhatsApp Us</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Global Language Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">↑</div>
+
+    <script>
+        // COURSE DATA ARRAY
+        const coursesData = [
+            {
+                id: 'gen-eng',
+                title: 'General English',
+                category: 'English',
+                level: 'Beginner to Advanced',
+                mode: 'Online / On-site',
+                img: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80',
+                shortDesc: 'Comprehensive program building solid practical grammar, vocabulary, reading, and listening foundational skills.',
+                overview: 'General English covers all fundamental language skills needed for daily communication, study, and workplaces.',
+                whoFor: 'Students and professionals looking for a structured, multi-level English language foundation.',
+                outcomes: 'Improved reading comprehension, basic-to-fluent writing accuracy, clear listening skills, and grammar application.',
+                topics: 'Core Grammar, Essential Vocabulary, Paragraph Structure, Everyday Conversation, Reading Comprehension.'
+            },
+            {
+                id: 'spk-eng',
+                title: 'Spoken English',
+                category: 'English',
+                level: 'All Levels',
+                mode: 'Online / On-site',
+                img: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=600&q=80',
+                shortDesc: 'Interactive conversation course focused strictly on building verbal confidence and natural speaking flow.',
+                overview: 'Spoken English concentrates on reducing speaking hesitation, refining pronunciation, and developing conversational ease.',
+                whoFor: 'Learners who know basic English grammar but struggle to speak confidently in public or social situations.',
+                outcomes: 'Greater speaking fluidity, reduced hesitation, practical vocabulary usage, improved accent clarity.',
+                topics: 'Conversation Drills, Accent & Pronunciation, Situational Roleplay, Public Speaking Confidence.'
+            },
+            {
+                id: 'biz-eng',
+                title: 'Business English',
+                category: 'English',
+                level: 'Intermediate+',
+                mode: 'Online / On-site',
+                img: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80',
+                shortDesc: 'Professional communication training covering corporate emails, presentations, negotiations, and workplace terminology.',
+                overview: 'Targeted course designed specifically for corporate professionals and career-oriented individuals.',
+                whoFor: 'Working professionals, job candidates, and executives communicating in international business settings.',
+                outcomes: 'Professional email writing mastery, confident presentation delivery, effective meeting participation.',
+                topics: 'Formal Writing, Presentation Skills, Business Vocabulary, Interview Preparation, Meeting Ethics.'
+            },
+            {
+                id: 'ielts-prep',
+                title: 'IELTS Preparation',
+                category: 'IELTS',
+                level: 'Intermediate to Advanced',
+                mode: 'Online / On-site',
+                img: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80',
+                shortDesc: 'Focused training on IELTS strategies, essay writing formats, reading speed, and oral interview practice.',
+                overview: 'Comprehensive preparation module targeting all four test modules: Listening, Reading, Writing, and Speaking.',
+                whoFor: 'Students planning study abroad or professionals seeking international immigration visas.',
+                outcomes: 'Understanding test formats, time-management strategies, essay structure mastery, test band score optimization.',
+                topics: 'Academic Writing Task 1 & 2, General Training Writing, Speaking Mock Tests, Reading Speed Strategies.'
+            },
+            {
+                id: 'ger-a1',
+                title: 'German A1',
+                category: 'German',
+                level: 'Beginner',
+                mode: 'Online / On-site',
+                img: 'https://images.unsplash.com/photo-1527866512907-a35a62a0f6c5?auto=format&fit=crop&w=600&q=80',
+                shortDesc: 'Introductory German course covering basic sentence structure, everyday vocabulary, and fundamental grammar.',
+                overview: 'First steps in learning the German language based on the Common European Framework of Reference (CEFR).',
+                whoFor: 'Complete beginners starting German for study, visa requirements, or cultural interest.',
+                outcomes: 'Ability to introduce yourself, ask simple questions, understand daily phrases, and form basic sentences.',
+                topics: 'Alphabet & Phonetics, Daily Greetings, Basic Nouns & Cases, Present Tense Verbs, Shopping Phrases.'
+            },
+            {
+                id: 'ger-a2',
+                title: 'German A2',
+                category: 'German',
+                level: 'Elementary',
+                mode: 'Online / On-site',
+                img: 'https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=600&q=80',
+                shortDesc: 'Expand your German vocabulary and master past tense forms, subordinate clauses, and practical dialogue.',
+                overview: 'Follow-up German module expanding communication ability into routine tasks and familiar topics.',
+                whoFor: 'Students who have completed German A1 or possess equivalent elementary German understanding.',
+                outcomes: 'Describing past events, expressing opinions simply, navigating travel/daily life situations in German.',
+                topics: 'Past Tense (Perfekt), Modal Verbs, Prepositions, Relative Clauses, Work & Travel Dialogue.'
+            },
+            {
+                id: 'fre-beg',
+                title: 'French Beginner',
+                category: 'French',
+                level: 'Beginner',
+                mode: 'Online / On-site',
+                img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80',
+                shortDesc: 'Learn fundamental French pronunciation, greetings, essential grammar, and basic dialogue skills.',
+                overview: 'An engaging introduction to French language basics with heavy focus on accurate pronunciation.',
+                whoFor: 'Beginners wishing to learn conversational French for travel, education, or personal interest.',
+                outcomes: 'Clear basic pronunciation, fundamental sentence assembly, basic interactive conversation ability.',
+                topics: 'French Phonetics, Basic Greetings, Present Tense Conjugation, Daily Vocabulary, Numbers & Ordering.'
+            },
+            {
+                id: 'ara-lang',
+                title: 'Arabic Language',
+                category: 'Arabic',
+                level: 'All Levels',
+                mode: 'Online / On-site',
+                img: 'https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=600&q=80',
+                shortDesc: 'Modern Standard Arabic course covering script reading, correct pronunciation, and basic conversation.',
+                overview: 'Structured program introducing the Arabic alphabet, root-word concepts, and daily communication.',
+                whoFor: 'Learners looking to read, write, and converse in standard Arabic.',
+                outcomes: 'Arabic script reading fluency, basic conversational competence, sound grammatical understanding.',
+                topics: 'Alphabet & Vowels, Sentence Structure, Vocabulary Building, Reading Drills, Practical Dialogue.'
+            },
+            {
+                id: 'spa-beg',
+                title: 'Spanish Beginner',
+                category: 'Spanish',
+                level: 'Beginner',
+                mode: 'Online / On-site',
+                img: 'https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=600&q=80',
+                shortDesc: 'Discover Spanish fundamentals including key verbs, everyday greetings, and practical conversation skills.',
+                overview: 'A lively beginner-level entry into Spanish, emphasizing functional vocabulary and common expressions.',
+                whoFor: 'Anyone interested in starting Spanish for general communication, travel, or career diversification.',
+                outcomes: 'Basic conversational ability, comprehension of simple spoken Spanish, foundational grammar skills.',
+                topics: 'Greetings & Introductions, Present Tense Verbs (Ser/Estar), Daily Routines, Travel Expressions.'
+            }
+        ];
+
+        // DOM ELEMENTS
+        const coursesGrid = document.getElementById('courses-grid-container');
+        const searchInput = document.getElementById('course-search-input');
+        const filterBtns = document.querySelectorAll('.pill-btn');
+        const modal = document.getElementById('course-modal');
+        const modalCloseBtn = document.getElementById('modal-close-btn');
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const backToTopBtn = document.getElementById('backToTop');
+        const enrollForm = document.getElementById('enrollment-form');
+        const formAlert = document.getElementById('form-alert');
+        const waContinueBtn = document.getElementById('wa-continue-btn');
+
+        let currentFilter = 'all';
+
+        // RENDER COURSES FUNCTION
+        function renderCourses(courses) {
+            coursesGrid.innerHTML = '';
+            if (courses.length === 0) {
+                coursesGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--text-muted);">No courses matching your search criteria were found.</div>`;
+                return;
+            }
+
+            courses.forEach(c => {
+                const card = document.createElement('div');
+                card.className = 'course-card';
+                card.innerHTML = `
+                    <img src="${c.img}" alt="${c.title}" class="course-img" loading="lazy">
+                    <div class="course-body">
+                        <div class="course-tags">
+                            <span class="course-level">${c.level}</span>
+                            <span class="course-mode">${c.mode}</span>
+                        </div>
+                        <h3 class="course-title">${c.title}</h3>
+                        <p class="course-desc">${c.shortDesc}</p>
+                        <div class="course-meta">
+                            <div>Fee: <strong>Contact for current fee</strong></div>
+                            <div>Schedule: <strong>Schedule available on inquiry</strong></div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-outline" onclick="openModal('${c.id}')">View Details</button>
+                            <a href="#enroll" class="btn btn-primary">Enroll Now</a>
+                        </div>
+                    </div>
+                `;
+                coursesGrid.appendChild(card);
+            });
+        }
+
+        // FILTER & SEARCH COMBINED
+        function filterCourses() {
+            const query = searchInput.value.toLowerCase().trim();
+            const filtered = coursesData.filter(c => {
+                const matchesFilter = (currentFilter === 'all') || (c.category.toLowerCase() === currentFilter.toLowerCase());
+                const matchesSearch = c.title.toLowerCase().includes(query) || 
+                                      c.shortDesc.toLowerCase().includes(query) || 
+                                      c.category.toLowerCase().includes(query);
+                return matchesFilter && matchesSearch;
+            });
+            renderCourses(filtered);
+        }
+
+        // MODAL OPEN / CLOSE
+        function openModal(courseId) {
+            const course = coursesData.find(c => c.id === courseId);
+            if (!course) return;
+
+            document.getElementById('modal-title').innerText = course.title;
+            document.getElementById('modal-body-content').innerHTML = `
+                <p style="color: var(--text-muted); margin-bottom: 1rem;">${course.overview}</p>
+                
+                <h4>Who This Course Is For</h4>
+                <p style="font-size: 0.9rem; color: var(--text-main);">${course.whoFor}</p>
+                
+                <h4>Learning Outcomes</h4>
+                <p style="font-size: 0.9rem; color: var(--text-main);">${course.outcomes}</p>
+                
+                <h4>Topics Covered</h4>
+                <p style="font-size: 0.9rem; color: var(--text-main);">${course.topics}</p>
+                
+                <div style="margin-top: 1.25rem; font-size: 0.85rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem;">
+                    <p><strong>Level:</strong> ${course.level}</p>
+                    <p><strong>Learning Mode:</strong> ${course.mode}</p>
+                    <p><strong>Fee:</strong> Contact for current fee</p>
+                    <p><strong>Schedule:</strong> Schedule available on inquiry</p>
+                </div>
+            `;
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        // LIGHTBOX
+        function openLightbox(src) {
+            const lb = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lightbox-img');
+            lbImg.src = src;
+            lb.classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        // INITIALIZE EVENTS
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCourses(coursesData);
+
+            // Filter Buttons Event
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    currentFilter = e.target.getAttribute('data-filter');
+                    filterCourses();
+                });
+            });
+
+            // Search Input Event
+            searchInput.addEventListener('input', filterCourses);
+
+            // Modal Close Events
+            modalCloseBtn.addEventListener('click', closeModal);
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // Mobile Navigation Toggle
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+
+            // Close nav when clicking a link
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                });
+            });
+
+            // FAQ Accordion Toggle
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(q => {
+                q.addEventListener('click', () => {
+                    const parent = q.parentElement;
+                    const isActive = parent.classList.contains('active');
+                    
+                    document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+                    
+                    if (!isActive) {
+                        parent.classList.add('active');
+                    }
+                });
+            });
+
+            // Enrollment Form Validation & Handling
+            enrollForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('fullname').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                const selectedCourse = document.getElementById('course').value;
+
+                if (!name || !phone || !selectedCourse) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                // Show success state
+                enrollForm.style.display = 'none';
+                formAlert.style.display = 'block';
+
+                // Format WhatsApp Message
+                const msg = `Hello Global Language Academy, I submitted an enrollment request.%0A%0A*Name:* ${encodeURIComponent(name)}%0A*Phone:* ${encodeURIComponent(phone)}%0A*Course:* ${encodeURIComponent(selectedCourse)}`;
+                waContinueBtn.href = `https://wa.me/923472842874?text=${msg}`;
+            });
+
+            // Scroll Events: Back To Top & Sticky Active Nav
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 400) {
+                    backToTopBtn.classList.add('active');
+                } else {
+                    backToTopBtn.classList.remove('active');
+                }
+
+                // Scroll spy for navigation highlighting
+                const sections = document.querySelectorAll('section[id]');
+                const scrollY = window.pageYOffset;
+
+                sections.forEach(current => {
+                    const sectionHeight = current.offsetHeight;
+                    const sectionTop = current.offsetTop - 100;
+                    const sectionId = current.getAttribute('id');
+                    const navItem = document.querySelector(`.nav-menu a[href*=${sectionId}]`);
+
+                    if (navItem) {
+                        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+                            navItem.classList.add('active');
+                        } else {
+                            navItem.classList.remove('active');
+                        }
+                    }
+                });
+            });
+
+            // Back to top click
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
